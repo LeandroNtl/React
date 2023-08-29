@@ -3,11 +3,13 @@ import { styled } from 'styled-components'
 const StyledMain = styled.main`
     width: 100%;
     min-height: 100vh;
-    background-color: #fff;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+
+    padding: 10px;
+    background-color: #fff;
 `;
 
 const Main = ({ children }) => {

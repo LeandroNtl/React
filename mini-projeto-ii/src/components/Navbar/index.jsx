@@ -46,7 +46,7 @@ const Links = styled(Link)`
     `}
 
     &:hover {
-        color: #01ff2b;
+        color: #01FF2B;
     }
 `;
 

@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Notfound from "../pages/Notfound";
 import Dashboard from "../pages/Dashboard";
+import Avaliate from "../pages/Avaliate";
 
 
 const Router = createBrowserRouter([
@@ -30,6 +31,10 @@ const Router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard/>
+            },
+            {
+                path: "/avaliate/:id",
+                element: <Avaliate/>
             },
             {
                 path: "*",
