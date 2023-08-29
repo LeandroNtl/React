@@ -8,7 +8,6 @@ const StyledMain = styled.main`
     flex-direction: row;
     align-items: flex-start;
 
-    padding: 10px;
     background-color: #fff;
 `;
 

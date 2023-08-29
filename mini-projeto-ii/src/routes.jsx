@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Base from "../pages/Base";
+import Base from "./pages/Base";
 
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Notfound from "../pages/Notfound";
-import Dashboard from "../pages/Dashboard";
-import Avaliate from "../pages/Avaliate";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Notfound from "./pages/Notfound";
+import Dashboard from "./pages/Dashboard";
+import Avaliate from "./pages/Avaliate";
 
 
 const Router = createBrowserRouter([
