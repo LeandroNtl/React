@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Main from "../components/Main";
+import Navbar from "../components/Navbar";
 
 // const theme = localStorage.getItem('theme') || 'light';
 // const
@@ -10,13 +11,13 @@ function Base() {
   return (
     <>
       <Header>
-        <h1>Header</h1>
+        <Navbar/>
       </Header>
       <Main>
         <Outlet/>
       </Main>
       <Footer>
-        <h1>Footer</h1>
+        <p>&copy; 2023 - Desenvolvido por Leandro Natálio</p>
       </Footer>
     </>
   );
