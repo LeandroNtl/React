@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
     border-bottom: 1px solid #000;
 `;
 
-const ContainerTop = styled.div`
+const LogoContainer = styled.div`
     width: 100%;
     height: 10vh;
 
@@ -23,7 +23,7 @@ const ContainerTop = styled.div`
     align-items: center;
 `;
 
-const ContainerBottom = styled.div`
+const NavbarContainer = styled.div`
     width: 100%;
     height: 5vh;
 
@@ -34,13 +34,14 @@ const ContainerBottom = styled.div`
     border-top: 1px solid #E5E5E5;
 `;
 
-const LogoContainer = styled.div`
+const InstitutionContainer = styled.div`
     width: 50%;
     height: 100%;
 
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
     padding-left: 20px;
 `;
@@ -56,20 +57,34 @@ const TitleContainer = styled.div`
     padding-right: 20px;
 `;
 
+const SmallText = styled.p`
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+`;
+
+const BigText = styled.h2`
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+`;
+
 const Header = ({ children }) => {
     return (
         <HeaderContainer>
-            <ContainerTop>
-                <LogoContainer>
-                    <h1>Logo</h1>
-                </LogoContainer>
+            <LogoContainer>
+                <InstitutionContainer>
+                    <SmallText>IFPI</SmallText>
+                    <BigText>Instituto Federal do Piauí</BigText>
+                    <SmallText>Ministério da Educação</SmallText>
+                </InstitutionContainer>
                 <TitleContainer>
-                    <h1>Mini Projeto II</h1>
+                    <BigText>Avalia IFPI</BigText>
                 </TitleContainer>
-            </ContainerTop>
-            <ContainerBottom>
+            </LogoContainer>
+            <NavbarContainer>
                 {children}
-            </ContainerBottom>
+            </NavbarContainer>
 
         </HeaderContainer>
     )

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 
-const NavbarContainer = styled.nav`
+const StyledNavbar = styled.nav`
     width: 50%;
     height: 100%;
 
@@ -59,7 +59,7 @@ const Navbar = () => {
     const links = ["/", "/dashboard", "/contact", "/about"];
 
     return (
-        <NavbarContainer>
+        <StyledNavbar>
             <NavbarLinks>
                 {texts.map((text, index) => (
                     <NavbarLink key={text}>
@@ -67,7 +67,7 @@ const Navbar = () => {
                     </NavbarLink>
                 ))}
             </NavbarLinks>
-        </NavbarContainer>
+        </StyledNavbar>
     );
 };
 
