@@ -7,17 +7,17 @@ import NumberEntry from "./NumberEntry";
 import forms from "../../data/forms";
 
 const FormContainer = styled.div`
-    width: 50%;
-    min-height: 50vh;
+    width: 60%;
+    min-height: 60vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #168028;
+    border: 1px solid #F5F5F5;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #168028;
+    box-shadow: 0px 0px 4px 0px #168028;
     padding: 20px;
     margin: 20px;
 `;
@@ -68,9 +68,9 @@ const Form = ({ id }) => {
     return (
         <FormContainer>
             <FormTitle>Avaliar {id}</FormTitle>
-            <StyledForm>
+            <StyledForm method="GET" action="">
                 {forms[id].map((item, index) => {
-                    if (item.type === "text" || item.type === "email") {
+                    if (item.type === "text") {
                         return (
                             <TextEntry
                                 key={index}
@@ -116,47 +116,3 @@ const Form = ({ id }) => {
 };
 
 export default Form;
-
-{/* <FormContainer>
-    <FormTitle>Avaliar {props.id}</FormTitle>
-    <StyledForm>
-        {data.map((item, index) => {
-            if (item.type === "text" || item.type === "email") {
-                return (
-                    <TextEntry
-                        key={index}
-                        id={item.id}
-                        label={item.label}
-                        name={item.name}
-                        type={item.type}
-                        required={item.required}
-                        placeholder={item.placeholder}
-                    />
-                );
-            } else if (item.type === "select") {
-                return (
-                    <SelectEntry 
-                        key={index} 
-                        id={item.id} 
-                        label={item.label} 
-                        name={item.name} 
-                        type={item.type} required={item.required} values={item.values} 
-                    />
-                );
-            } else if (item.type === "number") {
-                return (
-                    <NumberEntry
-                        key={index}
-                        id={item.id}
-                        label={item.label}
-                        name={item.name}
-                        type={item.type}
-                        required={item.required}
-                        placeholder={item.placeholder}
-                    />
-                );
-            }
-        })}
-        <Button type="submit">Enviar</Button>
-    </StyledForm>
-</FormContainer> */}
