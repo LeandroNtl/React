@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 
+import Form from '../../components/Form';
+
 const Avaliate = () => {
 
     // pegando a url da pagina
@@ -7,7 +9,7 @@ const Avaliate = () => {
 
     return (
         <>
-            <h1>Avaliate {id}</h1>
+            <Form id={id} />
         </>
     );
 };

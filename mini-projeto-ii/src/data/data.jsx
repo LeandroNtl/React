@@ -15,7 +15,7 @@ const courses = {
     datasets: [
         {
             label: "Avaliação",
-            data: [90, 80, 70, 60],
+            data: [90, 95, 70, 80],
             fill: false,
             backgroundColor: backgroundColors,
         },
@@ -27,7 +27,7 @@ const disciplines = {
     datasets: [
         {
             label: "Avaliação",
-            data: [90, 80, 70, 60, 50, 40],
+            data: [95, 80, 70, 56, 90, 97],
             fill: false,
             backgroundColor: backgroundColors,
         },
@@ -39,7 +39,7 @@ const teachers = {
     datasets: [
         {
             label: "Avaliação",
-            data: [90, 80, 70, 60, 50, 40],
+            data: [99, 70, 88, 75, 90, 80],
             fill: false,
             backgroundColor: backgroundColors,
         },
