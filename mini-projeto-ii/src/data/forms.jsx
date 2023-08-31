@@ -1,3 +1,12 @@
+// A esclarecer do professor na apresentação do conteúdo.
+// A disponibilidade do professor para tirar dúvidas.
+// A capacidade do professor de estimular a participação dos alunos.
+// A organização das aulas.
+// A qualidade das atividades e tarefas propostas.
+// A pontualidade do professor.
+// A capacidade de comunicação do professor.
+// A abertura do professor para feedback.
+
 
 const forms = {
     professores: [
@@ -42,7 +51,65 @@ const forms = {
             type: "text",
             required: true,
             placeholder: "Comentário"
-        }
+        },
+        {
+            id: "O professor domina o conteúdo da disciplina.",
+            label: "O professor domina o conteúdo da disciplina.",
+            name: "O professor domina o conteúdo da disciplina.",
+            type: "checkbox",
+            required: true,
+            values: [
+                {
+                    id: 1,
+                    nome: "Discordo totalmente",
+                },
+                {
+                    id: 2,
+                    nome: "Discordo parcialmente",
+                },
+                {
+                    id: 3,
+                    nome: "Indiferente",
+                },
+                {
+                    id: 4,
+                    nome: "Concordo parcialmente",
+                },
+                {
+                    id: 5,
+                    nome: "Concordo totalmente",
+                }
+            ]
+        },
+        {
+            id: "O professor é pontual.",
+            label: "O professor é pontual.",
+            name: "O professor é pontual.",
+            type: "checkbox",
+            required: true,
+            values: [
+                {
+                    id: 1,
+                    nome: "Discordo totalmente",
+                },
+                {
+                    id: 2,
+                    nome: "Discordo parcialmente",
+                },
+                {
+                    id: 3,
+                    nome: "Indiferente",
+                },
+                {
+                    id: 4,
+                    nome: "Concordo parcialmente",
+                },
+                {
+                    id: 5,
+                    nome: "Concordo totalmente",
+                }
+            ]
+        },
     ],
 
     cursos: [

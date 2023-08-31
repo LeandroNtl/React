@@ -3,11 +3,12 @@ import { styled } from "styled-components";
 import TextEntry from "./TextEntry";
 import SelectEntry from "./SelectEntry";
 import NumberEntry from "./NumberEntry";
+import CheckboxEntry from "./CheckboxEntry";
 
 import forms from "../../data/forms";
 
 const FormContainer = styled.div`
-    width: 60%;
+    width: 70%;
     min-height: 60vh;
 
     display: flex;
@@ -104,6 +105,18 @@ const Form = ({ id }) => {
                                 type={item.type}
                                 required={item.required}
                                 placeholder={item.placeholder}
+                            />
+                        );
+                    }  else if (item.type === "checkbox") {
+                        return (
+                            <CheckboxEntry
+                                key={index}
+                                id={item.id}
+                                label={item.label}
+                                name={item.name}
+                                type={item.type}
+                                required={item.required}
+                                values={item.values}
                             />
                         );
                     }
