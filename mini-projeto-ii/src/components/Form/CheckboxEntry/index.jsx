@@ -48,7 +48,6 @@ const CheckboxEntry = (props) => {
                                 id={props.id}
                                 name={props.name}
                                 type={props.type}
-                                required={props.required}
                                 placeholder={props.placeholder}
                             />
                             <Label htmlFor={props.id}>{value.nome}</Label>
