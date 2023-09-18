@@ -2,7 +2,8 @@ import Container from "../../components/Container";
 import Searchbar from "../../components/Searchbar";
 import Api from "../../services/Api";
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import cancelar from "../../assets/cancelar.png";
 import lupa from "../../assets/pesquisa.png";
@@ -145,19 +146,26 @@ const Home = () => {
                     ))}
                 </StyledSelect>
             </Container>
+            <ToastContainer />
             <Container direction="row" align="flex-start" margin="20px 0 0 0">
                 
                 {albumInfo.name ? <Container align="flex-start" justify="flex-start" width="40%" border="1px solid #000">
                     <h2>Nome: {albumInfo.name}</h2>
                     <h3>Artista: {albumInfo.artist}</h3>
+                    <h3>Tags: </h3>
+                    <ul>
+                        {albumInfo.tags.tag.map((tag, index) => (
+                            <li key={index}>{tag.name}</li>
+                        ))}
+                    </ul>
+                    {albumInfo.wiki.published ? <h3>Data de lançamento: {albumInfo.wiki.published}</h3> : null}
 
-                    <h3>Tracks - Músicas: </h3>
-                    <Container direction="row wrap" justify="flex-start" border="1px solid #000">
-                        
+                    <h3>Músicas: </h3>
+                    {tracks.length > 0 ? <Container direction="row wrap" justify="flex-start" border="1px solid #000">
                         {tracks.map((track, index) => (
                             <h4 key={index}>{track.name}</h4>
                         ))}
-                    </Container>
+                    </Container> : null}
                 </Container> : null}
                
                 <Container direction="row wrap" justify="center">
