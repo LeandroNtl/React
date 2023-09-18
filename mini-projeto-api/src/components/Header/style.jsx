@@ -9,7 +9,6 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
 
-    background-color: #FFFFFF;
     color: #000000;
 
     border-bottom: 1px solid #000000;

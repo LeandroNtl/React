@@ -8,11 +8,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import cancelar from "../../assets/cancelar.png";
 import lupa from "../../assets/pesquisa.png";
 import { StyledOption, StyledSelect } from "../../components/Searchbar/style";
+import { InfoContainer, TrackContainer } from "../../components/Container/style";
 
 
 const Home = () => {
     
-    const API_KEY = ''
+    const API_KEY = '9254f230a45763de0eadfe44337d57b2'
 
     const [search, setSearch] = useState('');
     const [albums, setAlbums] = useState([]);
@@ -147,26 +148,26 @@ const Home = () => {
                 </StyledSelect>
             </Container>
             <ToastContainer />
-            <Container direction="row" align="flex-start" margin="20px 0 0 0">
+            <Container direction="row" align="flex-start">
                 
-                {albumInfo.name ? <Container align="flex-start" justify="flex-start" width="40%" border="1px solid #000">
+                {albumInfo.name ? <InfoContainer>
                     <h2>Nome: {albumInfo.name}</h2>
                     <h3>Artista: {albumInfo.artist}</h3>
                     <h3>Tags: </h3>
                     <ul>
-                        {albumInfo.tags.tag.map((tag, index) => (
+                        {albumInfo.tags ? albumInfo.tags.tag.map((tag, index) => (
                             <li key={index}>{tag.name}</li>
-                        ))}
+                        )) : <p>Nenhuma tag encontrada</p>}
                     </ul>
-                    {albumInfo.wiki.published ? <h3>Data de lançamento: {albumInfo.wiki.published}</h3> : null}
+                    {albumInfo.wiki ? <h3>Data de lançamento: {albumInfo.wiki.published}</h3> : <h3>Data de lançamento: Não informado</h3>}
 
-                    <h3>Músicas: </h3>
-                    {tracks.length > 0 ? <Container direction="row wrap" justify="flex-start" border="1px solid #000">
+                    <h3>Músicas:</h3>
+                    {tracks.length > 0 ? <TrackContainer>
                         {tracks.map((track, index) => (
                             <h4 key={index}>{track.name}</h4>
                         ))}
-                    </Container> : null}
-                </Container> : null}
+                    </TrackContainer> : <p>Nenhuma música encontrada</p>}
+                </InfoContainer> : null}
                
                 <Container direction="row wrap" justify="center">
                     {albums.map((item, index) => (

@@ -1,4 +1,4 @@
-import StyledContainer from "./style"
+import { StyledContainer } from "./style"
 
 
 const Container = ({ children, direction, justify, align, background, width, height, border, margin }) => {
