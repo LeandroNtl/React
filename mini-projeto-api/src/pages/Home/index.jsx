@@ -13,7 +13,7 @@ import { InfoContainer, TrackContainer } from "../../components/Container/style"
 
 const Home = () => {
     
-    const API_KEY = '9254f230a45763de0eadfe44337d57b2'
+    const API_KEY = ''
 
     const [search, setSearch] = useState('');
     const [albums, setAlbums] = useState([]);
@@ -38,6 +38,7 @@ const Home = () => {
                 const info = [albums.map(album => album.name), albums.map(album => album.artist.name)];
                 setAlbums(capas);
                 setInformations(info);
+                toast.success('Albuns encontrados');
 
             } else {
                 
@@ -50,6 +51,7 @@ const Home = () => {
                     const info = [albums.map(album => album.name), albums.map(album => album.artist.name)];
                     setAlbums(capas);
                     setInformations(info);
+                    toast.success('Albuns encontrados');
 
                 } else {
                             
@@ -95,7 +97,7 @@ const Home = () => {
         
         } catch (error) {
 
-            toast.error('Erro ao buscar albuns');
+            toast.error('Erro ao buscar músicas');
 
         }
 
@@ -125,6 +127,7 @@ const Home = () => {
         setTracks([]);
         setSearch('');
         setAlbumInfo({});
+        toast.success('Todos os albuns foram removidos');
 
     };
 
